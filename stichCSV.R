@@ -1,4 +1,4 @@
-# this will stich CSV files from Japanese VPO units.
+# stich CSV files together
 
 
 print("This function will stich together CSV files outputted by the japanese VPO units. It will ignore ALM logs.")
