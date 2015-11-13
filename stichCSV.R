@@ -1,7 +1,7 @@
 # stich CSV files together
 
 
-print("This function will stich together CSV files outputted by the japanese VPO units. It will ignore ALM logs.")
+print("This function will stich together CSV files.")
 
 #check if x variable exists then error out if it does
 if (exists("x")) {
@@ -53,8 +53,6 @@ require(sqldf)
 df_ <- as.data.frame(x) #instatialize data frame
 
 df_ <- sqldf("SELECT * FROM df_ WHERE x LIKE '%.csv'") # check csv selection (although this may have been routed differently)
-
-df_ <- sqldf("SELECT * FROM df_ WHERE x NOT LIKE '%ALMLog%'") #remove alarm log csv
 
 fullCSV_ <- data.frame()
 fullCSV_ <- NULL  #instantialize in nullify full CSV container
